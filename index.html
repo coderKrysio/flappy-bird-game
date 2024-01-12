@@ -1,18 +1,38 @@
 <!DOCTYPE html>
 <html lang="en" onclick="jump()">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Flapping Bird Game</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-    <div id="game">
-        <div id="block"></div>
-        <div id="hole"></div>
-        <div id="character"></div>
+    <div id="holder">
+        <div id="modal">
+            <p id="game-title">Flappy Bird Game</p>
+            <span>Fly the bird as far as you can without hitting a wood</span
+                >
+                <button id="start" onclick="startGame()">Start</button>
+                <button id="restart" onClick="window.location.reload(true)">
+                    Restart
+                </button>
+            </div>
+            <div id="scoreholder">
+                Score:
+                <span id="score">0</span>
+        </div>
+        <div id="game">
+            <div id="block"></div>
+            <div id="hole"></div>
+            <div class="gamestartbg" id="character">
+                <img id="character-image" />
+            </div>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
+
 </html>
